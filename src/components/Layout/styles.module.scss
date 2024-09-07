@@ -1,0 +1,18 @@
+.Layout {
+    display: flex;
+    column-gap: 20px;
+    height: calc(100vh - 90px);
+
+    &__LeftContainer {
+        flex: 0.3;
+    }
+
+    &__RightContainer {
+        flex: 1;
+        padding: 30px 10px 10px;
+
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.19);
+    }
+}

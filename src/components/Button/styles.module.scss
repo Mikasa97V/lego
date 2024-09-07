@@ -1,0 +1,74 @@
+@mixin Primary() {
+    color: #f3f2ef;
+    background: #ef8675;
+    border-color: #ef8675;
+}
+
+@mixin Secondary() {
+    color: #f3f2ef;
+    background: #ffc7c7;
+    border-color: #ffc7c7;
+}
+
+@mixin Bordered() {
+    color: #ef8675;
+    background: #fff;
+    border-color: #ef8675;
+}
+
+
+.Button {
+    width: fit-content;
+    padding: 5px 10px;
+
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+
+    font-size: 14px;
+
+    box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.19);
+
+    &__LoadingWrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &_primary {
+        @include Primary();
+
+        &:hover {
+            @include Secondary();
+        }
+
+        &_loading {
+            opacity: 0.7;
+        }
+    }
+
+    &_secondary {
+        @include Secondary();
+
+        &:hover {
+            @include Primary();
+        }
+
+        &_loading {
+            opacity: 0.7;
+        }
+    }
+
+    &_bordered {
+        @include Bordered();
+
+        &:hover {
+            @include Primary();
+        }
+
+        &_loading {
+            opacity: 0.7;
+        }
+    }
+}
